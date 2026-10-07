@@ -1,0 +1,29 @@
+{
+  "name": "realtime-transport-pbl",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FSD Internal 2: short polling, long polling, and SSE comparison",
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c cyan,magenta \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "benchmark": "node benchmark/run-benchmarks.js",
+    "benchmark:quick": "node benchmark/run-benchmarks.js --duration=30000 --baseline=5000",
+    "autocannon": "node benchmark/run-autocannon.js",
+    "charts": "python benchmark/create-charts.py",
+    "verify": "node benchmark/verify-project.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "autocannon": "^8.0.0",
+    "concurrently": "^9.2.1",
+    "vite": "^7.1.7"
+  }
+}

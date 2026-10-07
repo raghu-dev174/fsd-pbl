@@ -1,0 +1,10 @@
+node_modules/
+client/dist/
+report/qa/
+report/*.docx
+report/*.pdf
+screenshots/.capture/
+screenshots/
+charts/
+results/
+*.log
